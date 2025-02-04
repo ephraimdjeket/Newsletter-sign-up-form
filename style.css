@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ==========================
+         CSS Variables
+   ========================== */
+
+:root {
+
+  /* Primary colors */
+  --clr-tomato: hsl(4, 100%, 67%);
+
+  /* Neutral colors*/
+  --clr-dark-slate-grey: hsl(234, 29%, 20%);
+  --clr-charcoal-grey: hsl(235, 18%, 26%);
+  --clr-grey: hsl(231, 7%, 60%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Font */
+  --f-roboto: "Roboto", sans-serif;
+
+  /* Font sizes */
+  --fs-heading-1: clamp(2.5rem, 2.1479rem + 1.5023vw, 3.5rem);
+
+  /* Font weight */
+  --fw-400: 400;
+  --fw-700: 700;
+
+  /* Spacing */
+  --space-24: 1.5rem;
+  --space-40: 2.5rem;
+  --space-64: 4rem;
+}
+
+/* ==========================
+         CSS Reset
+   ========================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* ==========================
+         Main Content
+   ========================== */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-dark-slate-grey);
+  height: 100vh;
+  font-family: var(--f-roboto);
+}
+
+.newsletter-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-white);
+  height: 641px;
+  max-width: 928px;
+  border-radius: 36px;
+}
+
+.illustration-mobile {
+  display: none;
+}
+
+.newsletter-container {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.125rem, -1.2394rem + 5.8216vw, 4rem);
+  margin-right: 1.5rem;
+  margin-left: 4.5rem;
+}
+
+/* ==========================
+   Left side of newsletter container
+   ========================== */
+
+.stay-updated-container {
+  max-width: 376px;
+  font-weight: var(--fw-400);
+  margin-top: 6.063rem;
+}
+
+.stay-updated-container > h1 {
+  font-size: var(--fs-heading-1);
+  font-weight: var(--fw-700);
+  color: var(--clr-dark-slate-grey);
+}
+
+.stay-updated-container > p {
+  margin-block: var(--space-24);
+}
+
+.newsletter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.newsletter-list > li {
+  display: flex;
+  gap: var(--space-24);
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  margin-block: 2.5rem 5.625rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  max-width: 376px;
+  font-weight: var(--fw-700);
+}
+
+#email, .newsletter-submit {
+  height: 56px;
+  border-radius: 8px
+}
+
+#email {
+  border: 1px solid var(--clr-grey);
+  margin-block: 0.5rem 1.5rem;
+  padding-left: 1.5rem;
+  font-weight: var(--fw-400);
+}
+
+.newsletter-submit {
+  background-color: var(--clr-dark-slate-grey);
+  color: var(--clr-white);
+  border: none;
+}
+
+/* ==========================
+   Mobile view styling
+   ========================== */
+
+@media screen and (max-width: 48em) {
+
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-white);
+    height: 100%;
+    max-width: 100%;
+  }
+
+  .newsletter-wrapper {
+    justify-content: center;
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .newsletter-wrapper > img {
+    max-width: 100%;
+    margin-bottom: var(--space-40);
+  }
+
+   .newsletter-container {
+    justify-content: center;
+    flex-direction: column-reverse;
+    margin-block: 0rem;
+    margin: auto;
+    gap: 0rem;
+  }
+
+  .stay-updated-container {
+    margin: auto;
+  }
+
+  .illustration-desktop {
+    display: none;
+  }
+
+  .illustration-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .newsletter-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
