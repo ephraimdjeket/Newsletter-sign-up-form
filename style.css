@@ -182,8 +182,8 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--clr-white);
-    height: 100%;
     max-width: 100%;
+    height: 100vh;
   }
 
   .newsletter-wrapper {
@@ -193,6 +193,7 @@ body {
   }
 
   .newsletter-wrapper > img {
+    display: block;
     max-width: 100%;
     margin-bottom: var(--space-40);
   }
