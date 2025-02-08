@@ -4,11 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
   <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -25,16 +24,25 @@
           </li>
           <li><img src="assets/images/icon-success.svg" alt="success icon">And much more!</li>
         </ul>
-        <form class="newsletter-form" action="#">
+        <form id="newsletter-form" action="#">
           <div class="form-group">
             <label for="email"> Email address</label>
             <input type="email" id="email" name="email" placeholder="email@company.com" required>
+            <span id="email-error" aria-live="polite"></span>
           </div>
           <input class="newsletter-submit" type="submit" value="Subscribe to monthly newsletter">
         </form>
       </div>
       <img class="illustration-desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="illustration sign-up">
-
+    </section>
+    <section class="subscription-confirmation-section">
+      <article class="thanks-subscription-content">
+        <img src="assets/images/icon-success.svg" alt="success icon">
+        <h1>Thanks for subscribing!</h1>
+        <p>A confirmation email has been sent to <span id="user-email">ash@loremcompany.com</span>. Please open it and
+          click the button inside to confirm your subscription</p>
+        <button id="dismiss-button">Dismiss message</button>
+      </article>
     </section>
   </main>
 </body>
