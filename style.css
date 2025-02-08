@@ -78,11 +78,12 @@ h1, h2, h3, h4, h5, h6 {
    ========================== */
 
 body {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--clr-dark-slate-grey);
   height: 100vh;
+  background-color: var(--clr-dark-slate-grey);
   font-family: var(--f-roboto);
 }
 
@@ -142,7 +143,7 @@ body {
   width: 21px;
 }
 
-.newsletter-form {
+#newsletter-form {
   display: flex;
   flex-direction: column;
   margin-block: 2.5rem 5.625rem;
@@ -174,7 +175,62 @@ body {
   background-color: var(--clr-dark-slate-grey);
   color: var(--clr-white);
   border: none;
+  cursor: pointer;
 }
+
+.newsletter-submit:hover {
+  background-image: linear-gradient(to right top, #242741, #282b48, #2c304f, #313457, #35395e);
+}
+
+/* ==========================
+   Success message page
+   ========================== */
+
+   .subscription-confirmation-section {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--clr-white);
+    width: 504px;
+    border-radius: 36px;
+    padding: 4rem 0rem 4rem 0rem;
+   }
+
+   .thanks-subscription-content {
+    width: 376px;
+   }
+
+   .thanks-subscription-content > img {
+    width: 64px;
+   }
+
+   .thanks-subscription-content > h1 {
+    font-size: var(--fs-heading-1);
+    font-weight: var(--fw-700);
+    line-height: 1.1;
+    margin: var(--space-40) 0rem var(--space-24) 0rem;
+   }
+
+   #user-email {
+    font-weight: var(--fw-700);
+   }
+
+   #dismiss-button {
+    color: white;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--clr-dark-slate-grey);
+    height: 56px;
+    width: 100%;
+    margin-top: var(--space-40);
+    cursor: pointer;
+   }
+
+
 
 /* ==========================
    Mobile view styling
@@ -187,7 +243,6 @@ body {
     flex-direction: column;
     background-color: var(--clr-white);
     max-width: 100%;
-    height: 100vh;
   }
 
   .newsletter-wrapper {
@@ -196,10 +251,15 @@ body {
     border-radius: 0px;
   }
 
+  .newsletter-wrapper > .illustration-mobile {
+    display: none;
+  }
+
   .newsletter-wrapper > img {
     display: block;
     max-width: 100%;
     margin-bottom: var(--space-40);
+    padding-top: 10rem;
   }
 
    .newsletter-container {
@@ -208,6 +268,7 @@ body {
     margin-block: 0rem;
     margin: auto;
     gap: 0rem;
+    padding: 0rem var(--space-24)
   }
 
   .stay-updated-container {
@@ -219,7 +280,7 @@ body {
   }
 
   .illustration-mobile {
-    display: block;
+    display: none;
     width: 100%;
   }
 
@@ -227,5 +288,13 @@ body {
     display: flex;
     flex-direction: column;
   }
+
+  /* ==========================
+   Success message page
+   ========================== */
+
+  .thanks-subscription-content {
+    width: 327px;
+   }
   
 }
