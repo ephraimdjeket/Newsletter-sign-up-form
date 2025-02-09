@@ -12,8 +12,8 @@
 
 <body>
   <main class="newsletter-wrapper">
-    <img class="illustration-mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="illustration sign-up">
-    <section class="newsletter-container">
+    <img id="illustration-mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="illustration sign-up">
+    <section id="newsletter-container">
       <div class="stay-updated-container">
         <h1>Stay updated!</h1>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -33,13 +33,13 @@
           <input class="newsletter-submit" type="submit" value="Subscribe to monthly newsletter">
         </form>
       </div>
-      <img class="illustration-desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="illustration sign-up">
+      <img id="illustration-desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="illustration sign-up">
     </section>
-    <section class="subscription-confirmation-section">
+    <section id="subscription-confirmation-section">
       <article class="thanks-subscription-content">
         <img src="assets/images/icon-success.svg" alt="success icon">
         <h1>Thanks for subscribing!</h1>
-        <p>A confirmation email has been sent to <span id="user-email">ash@loremcompany.com</span>. Please open it and
+        <p>A confirmation email has been sent to <span id="user-email"></span>. Please open it and
           click the button inside to confirm your subscription</p>
         <button id="dismiss-button">Dismiss message</button>
       </article>

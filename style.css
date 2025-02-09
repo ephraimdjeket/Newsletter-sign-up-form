@@ -96,11 +96,11 @@ body {
   border-radius: 36px;
 }
 
-.illustration-mobile {
+#illustration-mobile {
   display: none;
 }
 
-.newsletter-container {
+#newsletter-container {
   display: flex;
   align-items: center;
   gap: clamp(0.125rem, -1.2394rem + 5.8216vw, 4rem);
@@ -186,7 +186,7 @@ body {
    Success message page
    ========================== */
 
-   .subscription-confirmation-section {
+   #subscription-confirmation-section {
     display: none;
     justify-content: center;
     align-items: center;
@@ -229,6 +229,12 @@ body {
     margin-top: var(--space-40);
     cursor: pointer;
    }
+  
+  form input[type="email"]:valid {
+    border: 2px solid green !important;
+  }
+
+
 
 
 
@@ -251,7 +257,7 @@ body {
     border-radius: 0px;
   }
 
-  .newsletter-wrapper > .illustration-mobile {
+  .newsletter-wrapper > #illustration-mobile {
     display: none;
   }
 
@@ -262,7 +268,7 @@ body {
     padding-top: 10rem;
   }
 
-   .newsletter-container {
+  #newsletter-container {
     justify-content: center;
     flex-direction: column-reverse;
     margin-block: 0rem;
@@ -275,11 +281,11 @@ body {
     margin: auto;
   }
 
-  .illustration-desktop {
+  #illustration-desktop {
     display: none;
   }
 
-  .illustration-mobile {
+  #illustration-mobile {
     display: none;
     width: 100%;
   }
