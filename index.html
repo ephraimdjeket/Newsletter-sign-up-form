@@ -11,38 +11,37 @@
 </head>
 
 <body>
-  <main class="newsletter-wrapper">
-    <img id="illustration-mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="illustration sign-up">
+  <main>
     <section id="newsletter-container">
-      <div class="stay-updated-container">
+      <img id="illustration-desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="illustration desktop">
+      <img id="illustration-mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="illustration mobile">
+      <div class="newsletter-content">
         <h1>Stay updated!</h1>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul class="newsletter-list">
-          <li><img src="assets/images/icon-success.svg" alt="success icon">Product discovery and building what matters
+        <ul>
+          <li><img src="assets/images/icon-success.svg" alt="icon success">Product discovery and building what matters
           </li>
-          <li><img src="assets/images/icon-success.svg" alt="success icon">Measuring to ensure updates are a success
+          <li><img src="assets/images/icon-success.svg" alt="icon success">Measuring to ensure updates are a success
           </li>
-          <li><img src="assets/images/icon-success.svg" alt="success icon">And much more!</li>
+          <li><img src="assets/images/icon-success.svg" alt="icon success">And much more!</li>
         </ul>
         <form id="newsletter-form" action="#">
           <div class="form-group">
-            <label for="email"> Email address</label>
-            <input type="email" id="email" name="email" placeholder="email@company.com" required>
-            <span id="email-error" aria-live="polite"></span>
+            <div class="form-text-wrapper"><label for="email">Email address</label>
+              <small>Valid email required</small>
+            </div>
+            <input type="email" name="email" id="email" placeholder="email@company.com" required>
+            <input class="submit-btn" type="submit" value="Subscribe to monthly newsletter">
           </div>
-          <input class="newsletter-submit" type="submit" value="Subscribe to monthly newsletter">
         </form>
       </div>
-      <img id="illustration-desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="illustration sign-up">
     </section>
-    <section id="subscription-confirmation-section">
-      <article class="thanks-subscription-content">
-        <img src="assets/images/icon-success.svg" alt="success icon">
-        <h1>Thanks for subscribing!</h1>
-        <p>A confirmation email has been sent to <span id="user-email"></span>. Please open it and
-          click the button inside to confirm your subscription</p>
-        <button id="dismiss-button">Dismiss message</button>
-      </article>
+    <section id="confirmation-container">
+      <img class="confirmation-success-icon" src="assets/images/icon-success.svg" alt="confirmation success icon">
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <span id="user-email"></span>. Please open it and click the button inside
+        to confirm your subscription.</p>
+      <button id="dismiss-button">Dismiss message</button>
     </section>
   </main>
 </body>
