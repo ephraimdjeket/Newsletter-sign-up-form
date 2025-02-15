@@ -84,6 +84,12 @@ h1, h2, h3, h4, h5, h6 {
   color: red;
 }
 
+.green {
+  background-color: rgba(85, 255, 127, 0.15);
+  border: 1px solid green;
+  color: green;
+}
+
 /* ==========================
          Newsletter Content
    ========================== */
@@ -179,6 +185,11 @@ input {
 
 .submit-btn:hover {
   background-image: linear-gradient(to right, #FF6A3A, #FF527B);
+}
+
+#confirmation-container {
+  background-color: white;
+  border-radius: 36px;
 }
 
 @media screen and (max-width: 48em) {

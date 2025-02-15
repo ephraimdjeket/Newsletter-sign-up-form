@@ -28,9 +28,9 @@
         <form id="newsletter-form" action="#">
           <div class="form-group">
             <div class="form-text-wrapper"><label for="email">Email address</label>
-              <small>Valid email required</small>
+              <small id="error-message" class="hidden">Valid email required</small>
             </div>
-            <input type="email" name="email" id="email" placeholder="email@company.com" required>
+            <input type="text" name="email" id="email" placeholder="email@company.com" required>
             <input class="submit-btn" type="submit" value="Subscribe to monthly newsletter">
           </div>
         </form>
