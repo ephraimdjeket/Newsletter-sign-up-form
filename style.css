@@ -90,6 +90,10 @@ h1, h2, h3, h4, h5, h6 {
   color: green;
 }
 
+#user-email {
+  font-weight: var(--fw-700);
+}
+
 /* ==========================
          Newsletter Content
    ========================== */
@@ -175,7 +179,7 @@ input {
   height: 56px;
 }
 
-.submit-btn {
+.submit-btn, #dismiss-button {
   border: none;
   background-color: var(--clr-dark-slate-grey);
   color: white;
@@ -183,13 +187,41 @@ input {
   cursor: pointer;
 }
 
-.submit-btn:hover {
+.submit-btn:hover, #dismiss-button:hover {
   background-image: linear-gradient(to right, #FF6A3A, #FF527B);
 }
 
 #confirmation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   background-color: white;
   border-radius: 36px;
+  height: 520px;
+  max-width: 504px;
+  padding: 0rem var(--space-64);
+}
+
+#confirmation-container > img {
+  height: 64px;
+  margin-top: 48px;
+}
+
+#confirmation-container > h1 {
+  font-size: var(--fs-heading-1);
+  line-height: 1;
+  margin-top: var(--space-40);
+  margin-bottom: var(--space-24);
+}
+
+#confirmation-container > p {
+  max-width: 376px;
+  margin-bottom: var(--space-40);
+}
+
+#dismiss-button {
+  width: 376px;
+  height: 56px;
 }
 
 @media screen and (max-width: 48em) {
