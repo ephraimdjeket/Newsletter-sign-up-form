@@ -192,7 +192,7 @@ input {
 }
 
 #confirmation-container {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: start;
   background-color: white;

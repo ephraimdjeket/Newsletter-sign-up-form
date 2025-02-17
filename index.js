@@ -9,11 +9,8 @@ const errorMessage = document.getElementById("error-message");
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 
-const validateEmail = (e) => {
+function validateEmail(e) {
   e.preventDefault();
-
-  emailInput.classList.remove("red", "green");
-  errorMessage.classList.add("hidden");
 
   const isValid = emailInput.value.trim().match(emailRegex);
 
@@ -28,10 +25,17 @@ const validateEmail = (e) => {
   }
 };
 
+function returnBack() {
+  newsletterFormContainer.style.display = "flex";
+  successPage.style.display = "none";
+  emailInput.value = "";
+  emailInput.classList.remove("red", "green");
+  errorMessage.classList.add("hidden");
+}
+
 
 formEl.addEventListener("submit", validateEmail);
 
-dismissBtn.addEventListener("click", () => {
-})
+dismissBtn.addEventListener("click", returnBack);
 
 
